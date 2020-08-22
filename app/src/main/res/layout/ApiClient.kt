@@ -13,7 +13,7 @@ import retrofit2.http.POST
 object ApiClient {
         var client = Builder().build()
 
-        var retrofit = courseActivity.Builder()
+        var retrofit = CoursesActivity.kt.Builder()
                 .baseUrl("https://courses-service.herokuapp.com/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)

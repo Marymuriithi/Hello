@@ -1,9 +1,11 @@
 package CoursesActivity.kt
+    import CoursesAdapter.kt.CoursesResponse
     import android.os.Bundle
     import android.preference.PreferenceManager
     import android.widget.Toast
     import androidx.appcompat.app.AppCompatActivity
     import androidx.recyclerview.widget.LinearLayoutManager
+    import com.example.hello.Course
     import com.example.hello.R
     import kotlinx.android.synthetic.main.activity_courses.*
     import retrofit2.Call
@@ -16,12 +18,12 @@ package CoursesActivity.kt
             setContentView(R.layout.activity_courses)
             var courseList = listOf<Course>(
                     Course("1", "Java", "AAID 104", "Rose Maina", "Create an app"),
-                    Course("2", "Python", "IAFD 101", "Jane Maina", "Runs code"),
+                    Course("2", "Python", "IAFD 101", "James Maina", "Runs code"),
                     Course("3", "Data scince", "ACFID 102", "Anne Maina", "Taking Data"),
-                    Course("4", "Android", "CFID 113", "Eunice Maina", "Creating apps"),
+                    Course("4", "Android", "CFID 113", "John Maina", "Creating apps"),
                     Course("5", "Machine Learning", "FAID 114", "Bety Maina", "Learning program"),
-                    Course("6", "Java Script", "SWID 104", "Lucy Maina", "Debuging "),
-                    Course("7", "Html", "AMZD 108", "Nicole Maina", "Create websites"),
+                    Course("6", "Java Script", "SWID 104", "Purith Maina", "Debuging "),
+                    Course("7", "Html", "AMZD 108", "Jeff Maina", "Create websites"),
                     Course("8", "Kotlin", "AAFG 107", "Micheal Maina", "Runing code"),
                     Course("9", "Django", "AFRID 102", "Monicah Maina", "Create an app"),
                     Course("10", "Network", "ASWID 113", "Winnie Maina", "Networking")
@@ -61,5 +63,8 @@ package CoursesActivity.kt
             })
         }
     }
+
+}
+class Builder {
 
 }
