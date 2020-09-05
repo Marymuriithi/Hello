@@ -5,12 +5,12 @@ import android.os.Parcelable
 
 data class Course(
         var courseId: String?,
-        var courseName: String,
-        var courseCode: String,
-        var instructor: String,
-        var description: String
-       @ : Parcelable {
-    constructor(parcel: Parcel) : this(
+        var courseName: String?,
+        var courseCode: String?,
+        var instructor: String?,
+        var description: String?,
+        Parcelable{
+    constructor(parcel: Parcel) :(
 
             parcel.readString(),
             parcel.readString(),
@@ -20,7 +20,7 @@ data class Course(
     ) {
     }
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
+    fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(courseId)
         parcel.writeString(courseName)
         parcel.writeString(courseCode)
@@ -28,7 +28,7 @@ data class Course(
         parcel.writeString(description)
     }
 
-    override fun describeContents(): Int {
+    fun describeContents(): Int {
         return 0
     }
 
@@ -41,7 +41,8 @@ data class Course(
             return arrayOfNulls(size)
         }
     }
-}SerializedName("course_id") var courseId: String,
+}
+@SerializedName("course_id") var courseId: String,
 @SerializedName("course_name") var courseName: String,
 @SerializedName("course_code") var courseCode: String,
 @SerializedName("instructor") var instructor: String,
